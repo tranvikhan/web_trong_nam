@@ -1,0 +1,119 @@
+{
+  "receives": {
+    "get_sensors": [
+      {
+        "_id": "SR000001",
+        "isConnect": true,
+        "value": { "temperature": 22.5, "humidity": 40 }
+      },
+      {
+        "_id": "SR000002",
+        "isConnect": true,
+        "value": { "temperature": 22.5, "humidity": 40 }
+      },
+      {
+        "_id": "SR000003",
+        "isConnect": true,
+        "value": { "temperature": 22.5, "humidity": 40 }
+      }
+    ],
+    "get_devices": [
+      {
+        "_id": "DV000001",
+        "isOn": true
+      },
+      {
+        "_id": "DV000002",
+        "isOn": false
+      },
+      {
+        "_id": "DV000003",
+        "isOn": false
+      }
+    ]
+  },
+  "sends": {
+    "ping_status": "ping status all sensors and devices",
+    "set_sensors": [
+      {
+        "_id": "SR000001",
+        "name": "Sensor 01",
+        "type": ["temperature", "humidity"]
+      },
+      {
+        "_id": "SR000002",
+        "name": "Sensor 02",
+        "type": ["temperature", "humidity"]
+      },
+      {
+        "_id": "SR000003",
+        "name": "Sensor 03",
+        "type": ["temperature", "humidity"]
+      }
+    ],
+    "set_devices": [
+      {
+        "_id": "DV000001",
+        "name": "Máy phun sương",
+        "port": 1,
+        "isOn": false
+      },
+      {
+        "_id": "DV000002",
+        "name": "Quạt hút ẩm",
+        "port": 2,
+        "isOn": false
+      },
+      {
+        "_id": "DV000003",
+        "name": "Máy sưởi",
+        "port": 3,
+        "isOn": false
+      }
+    ],
+    "set_mode": {
+      "isAuto": true
+    },
+    "set_season": {
+      "start_day": "2021-04-07",
+      "steps": [
+        {
+          "_id": "ST000001",
+          "info": {
+            "name": "Ủ đống",
+            "day": 21,
+            "ignored": false
+          },
+          "environments": {
+            "temperature": [30, 32],
+            "humidity": [79, 81]
+          }
+        },
+        {
+          "_id": "ST000002",
+          "info": {
+            "name": "Phơi",
+            "day": 5,
+            "ignored": false
+          },
+          "environments": {
+            "temperature": [30, 32],
+            "humidity": [79, 81]
+          }
+        },
+        {
+          "_id": "ST000003",
+          "info": {
+            "name": "Thu hoạch",
+            "day": 5,
+            "ignored": false
+          },
+          "environments": {
+            "temperature": [30, 32],
+            "humidity": [79, 81]
+          }
+        }
+      ]
+    }
+  }
+}
